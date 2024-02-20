@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert Text to Uppercase</title>
+  <style>
+    body {
+      font-family:'Times New Roman', Times, serif;
+      background-color: antiquewhite;
+    }
+    #container {
+      max-width: 700px;
+      font-size: 40px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #inputText {
+      width: 100%;
+      height: 400px;
+      padding: 7px;
+      font-size: 40px;
+      box-sizing: border-box;
+    }
+
+    #convertBtn {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      font-size: large;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #convertBtn:hover {
+      background-color: #327035;
+      font-size: large
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <label for="inputText">Enter text below to convert </label>
+  <input type="text" id="inputText">
+  <button id="convertBtn" onclick="convertToUppercase()">Convert to Uppercase</button>
+  <p id="convertedText"></p>
+</div>
+
+<script>
+function convertToUppercase() {
+  var inputElement = document.getElementById("inputText");
+  var inputValue = inputElement.value;
+  var uppercaseValue = inputValue.toUpperCase();
+  document.getElementById("convertedText").textContent = uppercaseValue;
+}
+</script>
+
+</body>
+</html>
